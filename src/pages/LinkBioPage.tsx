@@ -38,6 +38,7 @@ const links = [
     description: "История проходов и изменений",
     href: "#",
     icon: ClipboardList,
+    page: "journal" as const,
   },
 ]
 
