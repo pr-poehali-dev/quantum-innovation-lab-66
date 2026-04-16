@@ -10,6 +10,7 @@ const links = [
     description: "Список подразделений организации",
     href: "#",
     icon: Building2,
+    page: "departments" as const,
   },
   {
     title: "Сотрудники",
@@ -70,7 +71,7 @@ const itemVariants = {
   },
 }
 
-export function LinkBioPage() {
+export function LinkBioPage({ onNavigate }: { onNavigate?: (page: string) => void }) {
   return (
     <main className="relative min-h-screen px-6 py-10 flex flex-col overflow-hidden">
       <div className="fixed inset-0 z-0 bg-gradient-to-br from-slate-50 via-white to-slate-100" />
@@ -220,7 +221,10 @@ export function LinkBioPage() {
         <motion.div className="space-y-3 py-8" variants={containerVariants}>
           {links.map((link) => (
             <motion.div key={link.title} variants={itemVariants}>
-              <LinkCard {...link} />
+              <LinkCard
+                {...link}
+                onNavigate={link.page ? () => onNavigate?.(link.page!) : undefined}
+              />
             </motion.div>
           ))}
         </motion.div>

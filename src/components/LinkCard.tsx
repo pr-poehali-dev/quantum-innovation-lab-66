@@ -6,13 +6,22 @@ interface LinkCardProps {
   description?: string
   href: string
   icon: LucideIcon
+  onNavigate?: () => void
 }
 
-export function LinkCard({ title, description, href, icon: Icon }: LinkCardProps) {
+export function LinkCard({ title, description, href, icon: Icon, onNavigate }: LinkCardProps) {
+  const handleClick = (e: React.MouseEvent) => {
+    if (onNavigate) {
+      e.preventDefault()
+      onNavigate()
+    }
+  }
+
   return (
     <motion.a
       href={href}
-      target="_blank"
+      onClick={handleClick}
+      target={onNavigate ? undefined : "_blank"}
       rel="noopener noreferrer"
       className="group relative flex w-full items-center gap-4 rounded-[20px] px-4 py-4 overflow-hidden"
       style={{
