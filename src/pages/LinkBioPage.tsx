@@ -2,44 +2,44 @@ import { motion } from "framer-motion"
 import { ProfileSection } from "@/components/ProfileSection"
 import { LinkCard } from "@/components/LinkCard"
 import { SocialFooter } from "@/components/SocialFooter"
-import { Globe, Youtube, Mail, ShoppingBag, FileText, MessageCircle, Send } from "lucide-react"
+import { Building2, Users, KeyRound, ShieldCheck, ClipboardList, Mail, Phone, Send } from "lucide-react"
 
 const links = [
   {
-    title: "Мой сайт",
-    description: "Портфолио и услуги",
+    title: "Отделы",
+    description: "Список подразделений организации",
     href: "#",
-    icon: Globe,
+    icon: Building2,
   },
   {
-    title: "YouTube канал",
-    description: "Видео и туториалы",
+    title: "Сотрудники",
+    description: "Реестр сотрудников и их данные",
     href: "#",
-    icon: Youtube,
+    icon: Users,
   },
   {
-    title: "Магазин",
-    description: "Товары и услуги",
+    title: "Ключи и карты доступа",
+    description: "Выданные пропуска и ключи",
     href: "#",
-    icon: ShoppingBag,
+    icon: KeyRound,
   },
   {
-    title: "Telegram",
-    description: "Написать напрямую",
+    title: "Уровни допуска",
+    description: "Зоны и права доступа",
     href: "#",
-    icon: Send,
+    icon: ShieldCheck,
   },
   {
-    title: "Бесплатные материалы",
-    description: "Шаблоны и гайды",
+    title: "Журнал событий",
+    description: "История проходов и изменений",
     href: "#",
-    icon: FileText,
+    icon: ClipboardList,
   },
 ]
 
 const socials = [
+  { icon: Phone, href: "#", label: "Телефон" },
   { icon: Send, href: "#", label: "Telegram" },
-  { icon: MessageCircle, href: "#", label: "WhatsApp" },
   { icon: Mail, href: "#", label: "Email" },
 ]
 
@@ -211,9 +211,9 @@ export function LinkBioPage() {
       >
         <motion.div variants={itemVariants} className="pt-2">
           <ProfileSection
-            name="GlassLinks"
-            bio="Креативный дизайнер и разработчик"
-            imageUrl="/images/544291433-18043960274659947-5766591717842883293-n.jpg"
+            name="СКУД"
+            bio="Система контроля и управления доступом"
+            imageUrl="/placeholder.jpg"
           />
         </motion.div>
 
@@ -226,7 +226,7 @@ export function LinkBioPage() {
         </motion.div>
 
         <motion.div variants={itemVariants} className="pb-2">
-          <SocialFooter socials={socials} copyright="2025 GlassLinks" />
+          <SocialFooter socials={socials} copyright="2026 СКУД" />
         </motion.div>
       </motion.div>
     </main>
