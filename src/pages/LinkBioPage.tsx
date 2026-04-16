@@ -24,6 +24,7 @@ const links = [
     description: "Выданные пропуска и ключи",
     href: "#",
     icon: KeyRound,
+    page: "keys" as const,
   },
   {
     title: "Уровни допуска",
