@@ -3,8 +3,9 @@ import { LinkBioPage } from "./pages/LinkBioPage"
 import { DepartmentsPage } from "./pages/DepartmentsPage"
 import { EmployeesPage } from "./pages/EmployeesPage"
 import { KeysPage } from "./pages/KeysPage"
+import { AccessLevelsPage } from "./pages/AccessLevelsPage"
 
-type Page = "home" | "departments" | "employees" | "keys"
+type Page = "home" | "departments" | "employees" | "keys" | "access-levels"
 
 function App() {
   const [page, setPage] = useState<Page>("home")
@@ -12,6 +13,7 @@ function App() {
   if (page === "departments") return <DepartmentsPage onBack={() => setPage("home")} />
   if (page === "employees") return <EmployeesPage onBack={() => setPage("home")} />
   if (page === "keys") return <KeysPage onBack={() => setPage("home")} />
+  if (page === "access-levels") return <AccessLevelsPage onBack={() => setPage("home")} />
   return <LinkBioPage onNavigate={setPage} />
 }
 

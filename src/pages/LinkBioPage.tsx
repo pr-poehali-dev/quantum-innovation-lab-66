@@ -31,6 +31,7 @@ const links = [
     description: "Зоны и права доступа",
     href: "#",
     icon: ShieldCheck,
+    page: "access-levels" as const,
   },
   {
     title: "Журнал событий",
