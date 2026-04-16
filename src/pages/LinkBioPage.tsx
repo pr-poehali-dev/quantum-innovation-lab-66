@@ -17,6 +17,7 @@ const links = [
     description: "Реестр сотрудников и их данные",
     href: "#",
     icon: Users,
+    page: "employees" as const,
   },
   {
     title: "Ключи и карты доступа",
